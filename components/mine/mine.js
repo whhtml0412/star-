@@ -1,0 +1,11 @@
+angular.module('mineModule',[])
+    .config(['$routeProvider',function($routeProvider){
+        $routeProvider
+            .when('/mine',{
+                templateUrl:'components/mine/mine.html',
+                controller:'mineCtrl',
+                css:'components/mine/mine.css'
+            })
+    }])
+    .controller('mineCtrl',['$scope',function($scope){
+    }]);

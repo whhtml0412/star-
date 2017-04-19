@@ -1,0 +1,35 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="aixianfeng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>爱鲜蜂</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper-3.4.1.min.css"/>
+</head>
+<script src="js/libs/angular.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/libs/angular-route.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/libs/angular-css.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/libs/swiper-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="app.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/home/home.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/market/market.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/cart/cart.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/mine/mine.js" type="text/javascript" charset="utf-8"></script>
+<body>
+    <div id="wrap">
+        <!--内容切换栏   id=main   -->
+        <div id="main" ng-view=""></div>
+        <!--tab菜单栏    id=tab    -->
+        <div id="tab">
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#market">闪送超市</a></li>
+                <li><a href="#cart">购物车</a></li>
+                <li><a href="#mine">我的</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

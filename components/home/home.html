@@ -1,0 +1,49 @@
+<!--首页顶部-->
+<div class="header">
+    <ul>
+        <li>驼房营111111111111114444444323newnew23</li>
+        <li>搜索</li>
+    </ul>
+</div>
+<div id="box">
+    <!--轮播图-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="item in arrSwiper"><img src="{{item.activity.img}}" width="100%" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!--每日必抢等四个图标-->
+    <ul id="home_icon"><li ng-repeat="item in arrIcon"><img src="{{item.activity.img}}"><p>{{item.activity.name}}</p></li></ul>
+    <!--三元酸奶-->
+    <ul id="home_item">
+        <li ng-repeat="item in arrItem"><img src="{{item.activity.img}}"></li>
+    </ul>
+
+    <!--便利店 CVS-->
+    <div id="cvs">
+        <div id="cvs_div"  ng-repeat="item in arrCvs_div"><img src="{{item.chead_detail.img}}"/></div>
+        <ul id="cvs_hot"><li ng-repeat="item in arrCvs_hot"><img src="{{item.cactivity_detail.img}}"/></li></ul>
+        <ul id="cvs_more"><li ng-repeat="item in arrCvs_more"><img src="{{item.cicons_detail.img}}"/><p>{{item.cicons_detail.name}}</p></li></ul>
+        <ul id="cvs_ad"><li ng-repeat="item in arrCvs_ad"><img src="{{item.activity.img}}"/></li></ul>
+    </div>
+
+    <ul id="category">
+        <li ng-repeat="item in arrCategory_list">
+            <div>
+                <span>{{item.category_detail.name}}</span>
+            </div>
+            <img src="{{item.activity.img}}"/>
+            <ul>
+                <li ng-repeat="item2 in item.category_detail.goods">
+                    <img src="{{item2.img}}"/>
+                    <h3>{{item2.name}}</h3>
+                    <span class='jingxuan'>精选</span>
+                    <p>{{item2.specifics}}</p>
+                    <span class='partner_price'>{{"￥"+item2.partner_price}}</span>
+                    <span class='market_price'>{{"￥"+item2.market_price}}</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

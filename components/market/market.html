@@ -1,0 +1,44 @@
+<!--闪送超市顶部-->
+<div class="header">
+    <ul>
+        <li>驼房营</li>
+        <li>搜索</li>
+    </ul>
+</div>
+
+<!--主体部分-->
+<div id="market_box">
+    <!--左侧分类栏-->
+    <ul id="leftNav">
+        <li ng-repeat="(i,item) in arrNav_list" ng-click="changeList(item.id,i)">{{item.name}}</li>
+    </ul>
+    <!--右侧商品栏-->
+    <div id="rightNav">
+        <ul id="classify">
+            <li ng-click="showList()">全部分类</li>
+            <li ng-click="sortList()">综合排序</li>
+        </ul>
+        <ul id="classify_type" ng-show=isShow>
+            <li ng-repeat="item in arrType_list" ng-click="toType()">{{item.name}}</li>
+        </ul>
+        <ul id="market_List">
+            <li ng-repeat="item in arrMarket_List">
+                <div><img src="{{item.img}}"/></div>
+                <div class="goods_ifm">
+                    <p>{{item.name}}</p>
+                    <p><span class="jingxuan">精选</span></p>
+                    <p class="specifics">{{item.specifics}}</p>
+                    <p class="price">
+                        <span class="now_price">{{"￥"+item.partner_price}}</span>
+                        <span class="yuan_price">{{item.market_price}}</span>
+                    </p>
+                </div>
+                <div class="goods_num">
+                    <i class="minus" ng-click="minusNum()">-</i>
+                    <span class="num">{{num}}</span>
+                    <i class="add" ng-click="addNum">+</i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
